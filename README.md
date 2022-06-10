@@ -1,7 +1,7 @@
 # IVON Technologies
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
-### A Discord Giveaway bot written in Discord.js to create & enjoy Feature rich and Seamless Giveaways within your very own Discord guild!
+### The perfect giveaway bot to host giveaways easily on your server build with discord.js
 ## Links
 - ### This Giveaway Bot Was Created by [Sandaru Tharuneth](https://sandarutharuneth.com/) with the inspiration of [ZeroDiscord's Giveaway](https://github.com/ZeroDiscord/Giveaway) bot. 
 - [Become a Patreon](https://www.patreon.com/projectrazer)
