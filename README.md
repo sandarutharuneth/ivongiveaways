@@ -59,7 +59,7 @@ npm install
 <b>
   
 
-### Step 3 : Replace the Token in [config.json](https://github.com/sandarutharuneth/ivongiveaways/blob/master/config.json) <br>
+### Step 3 : Replace the Token in and other dependencies inside [.env](https://github.com/sandarutharuneth/ivongiveaways/blob/master/.env) <br>
 #### That's all! We Are Done! Now Simply host the Bot!
 
 ### Run with node
