@@ -69,7 +69,7 @@ node index.js
 ### Run with pm2
 ```sh
 npm install -g pm2@latest
-pm2 start --name "Giveaway" index.js --watch
+pm2 start --name "ivongiveaways" index.js --watch
 ```
 
 # Features
