@@ -1,6 +1,6 @@
 # IVON Technologies
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
-[![ivonbadge](https://i.imgur.com/1TLIl08.png)]
+[!(https://i.imgur.com/1TLIl08.png)
 
 ### The perfect giveaway bot to host giveaways easily on your server build with discord.js
 ## Links
