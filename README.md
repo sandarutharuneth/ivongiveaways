@@ -110,10 +110,3 @@ pm2 start --name "ivongiveaways" index.js --watch
 <img src=https://img.shields.io/badge/youtube-%23EE4831.svg?&style=for-the-badge&logo=youtube&logoColor=white alt=youtube style="margin-bottom: 5px;" />
 </a>  
 </div> 
-  
-### And Lots More!
-- Direct message when the server mentioned for joining is not joined
-- Direct message when the server mentioned for joining is joined 
-- Direct Message When User Reacts on an ended giveaway
-- Direct Message User On Removing Reaction
-- Direct Message Winner On Winning
