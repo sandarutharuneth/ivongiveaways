@@ -47,9 +47,7 @@ npm install
 ```
 
 ### Step 2: Obtain a Bot Token From [Here](https://discord.com/developers) <br> <br>
-<kbd>
-  <img src="https://zerosnap.000webhostapp.com/2faykzzg.gif">
-</kbd>
+➖
 <b>
   
 
@@ -75,22 +73,16 @@ pm2 start --name "ivongiveaways" index.js --watch
 
 # Features
 ## Featuring | Slash Commands 
-<kbd>
-  <img src="https://zerosnap.000webhostapp.com/ktfoi0f9.gif">
-</kbd>
+➖
 <b>
   
 ### Interactive Giveaway Creation
   
-  <kbd>
-  <img src="https://zerosnap.000webhostapp.com/mig6cvt0.gif">
-</kbd>
+➖
 <b>
   
 ### Featured ✨ Bonus Entries 
-<kbd>
-  <img src="https://zerosnap.000webhostapp.com/8eblx4sc.gif">
-</kbd>
+➖
 <b>
 
   <h3 align="left">Connect with me:</h3>
