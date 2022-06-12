@@ -156,7 +156,7 @@ module.exports = {
       bonusEntries: [
         {
           // Members who have the role which is assigned to "rolename" get the amount of bonus entries which are assigned to "BonusEntries"
-          bonus: new Function('member', `return member.roles.cache.some((r) => r.name === \'${bonusRole.name}\') ? ${bonusEntries} : null`),
+          bonus: new Function('member', `return member.roles.cache.some((r) => r.name === \'${bonusRole ?.name}\') ? ${bonusEntries} : null`),
           cumulative: false
         }
       ],
