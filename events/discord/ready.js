@@ -16,7 +16,7 @@ client.guilds.cache.forEach((guild) => {
 
   console.log(`[ / | Slash Command ] - ✅ Loaded all slash commands!`)
   console.log(`[STATUS] ${client.user.tag} is now online!`);
-  const activities = [`Your Activity`, `${mcount} users`];
+  const activities = [`Your Giveaways`, `${mcount} users`];
   setInterval(() => {
     let activity = activities[Math.floor(Math.random() * activities.length)];
     client.user.setActivity(activity, { type: "WATCHING" });
