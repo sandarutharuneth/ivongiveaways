@@ -14,13 +14,6 @@
 #### Copyright 2022 © All Rights are Reserved 
 
 
-# Contributions
-
-All contributions are welcomed, it is recommended to create an issue or reply in a comment of an existing issue to let us know what you are working on first, that way we do not overwrite each other.
-
-- Please read [contributing guide](.github/CONTRIBUTING.md) for details on this project.
-- Please respect the [pull request template](.github/PULL_REQUEST_TEMPLATE/pull_request_template.md) while submiting a pull request.
-
 # Code of Conduct
 
 Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
