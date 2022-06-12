@@ -23,7 +23,7 @@ All contributions are welcomed, it is recommended to create an issue or reply in
 
 # Code of Conduct
 
-Please read [code of conduct]([.github/](https://github.com/sandarutharuneth/ivongiveaways/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
+Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
 
 [![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
 
