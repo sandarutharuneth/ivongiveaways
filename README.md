@@ -54,6 +54,7 @@ npm install
   
 
 ### Step 3 : Replace the Token and other dependencies inside [.env](https://github.com/sandarutharuneth/ivongiveaways/blob/master/.env) <br>
+  ## Follow the [wiki](https://github.com/sandarutharuneth/ivongiveaways/wiki) for additional help
 ```sh
 TOEKN=Your Token goes here
 FOTTERIMG=Your Footer Image Link goes here
