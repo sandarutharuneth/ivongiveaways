@@ -5,7 +5,7 @@ const config = require("./config.json");
 const host = require("./host");
 client.config = config;
 
-// Initialise discord giveaways
+
 const { GiveawaysManager } = require("discord-giveaways");
 client.giveawaysManager = new GiveawaysManager(client, {
   storage: "./storage/giveaways.json",
@@ -33,7 +33,7 @@ fs.readdir("./events/discord", (_err, files) => {
   });
 });
 
-/* Load all events (giveaways based) */
+
 
 
 fs.readdir("./events/giveaways", (_err, files) => {
@@ -46,7 +46,7 @@ fs.readdir("./events/giveaways", (_err, files) => {
   })
 })
 
-// Let commands be a new collection ( message commands )
+
 client.commands = new Discord.Collection();
 /* Load all commands */
  fs.readdir("./commands/", (_err, files) => {
@@ -63,11 +63,11 @@ client.commands = new Discord.Collection();
 });
 
 
-// let interactions be a new collection ( slash commands  )
+
 client.interactions = new Discord.Collection();
-// creating an empty array for registering slash commands
+
 client.register_arr = []
-/* Load all slash commands */
+
 fs.readdir("./slash/", (_err, files) => {
   files.forEach(file => {
     if (!file.endsWith(".js")) return;
@@ -94,5 +94,5 @@ client.on("messageCreate", (message) => {
     }
 });
 
-// Login through the client
+
 client.login(process.env.TOKEN);
