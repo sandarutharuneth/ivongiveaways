@@ -31,7 +31,6 @@ module.exports = {
 
     run: async (client, interaction) => {
 
-        // If the member doesn't have enough permissions
         if (!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")) {
             return interaction.reply({
                 content: '<:wrong:984664520364552192> You need to have the manage messages permissions to start giveaways.',
@@ -46,7 +45,6 @@ module.exports = {
         await interaction.deferReply({
          ephemeral: true
         })
-        // Edit the giveaway
         try {
         await client.giveawaysManager.edit(gid, {
             newWinnersCount: winnersCount,
