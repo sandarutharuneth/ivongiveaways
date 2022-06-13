@@ -58,7 +58,6 @@ module.exports = {
 
   run: async (client, interaction) => {
 
-    // If the member doesn't have enough permissions
     if (!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")) {
       return interaction.reply({
         content: '<:wrong:984664520364552192> You need to have the manage messages permissions to start giveaways.',
@@ -144,23 +143,16 @@ module.exports = {
     }
 
 
-    // start giveaway
     client.giveawaysManager.start(giveawayChannel, {
-      // The giveaway duration
       duration: ms(giveawayDuration),
-      // The giveaway prize
       prize: giveawayPrize,
-      // The giveaway winner count
       winnerCount: parseInt(giveawayWinnerCount),
-      // BonusEntries If Provided
       bonusEntries: [
         {
-          // Members who have the role which is assigned to "rolename" get the amount of bonus entries which are assigned to "BonusEntries"
           bonus: new Function('member', `return member.roles.cache.some((r) => r.name === \'${bonusRole ?.name}\') ? ${bonusEntries} : null`),
           cumulative: false
         }
       ],
-      // Messages
       messages,
       extraData: {
         server: reqinvite == null ? "null" : reqinvite.guild.id,
