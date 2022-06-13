@@ -13,7 +13,6 @@ module.exports = {
 
     run: async (client, interaction) => {
 
-        // If the member doesn't have enough permissions
         if (!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")) {
             return interaction.reply({
                 content: '<:wrong:984664520364552192> You need to have the manage messages permission to reroll giveaways.',
@@ -22,15 +21,12 @@ module.exports = {
         }
 
         const query = interaction.options.getString('giveaway');
-
-        // try to find the giveaway with the provided prize OR with the ID
         const giveaway =
             // Search with giveaway prize
             client.giveawaysManager.giveaways.find((g) => g.prize === query && g.guildId === interaction.guild.id) ||
             // Search with giveaway ID
             client.giveawaysManager.giveaways.find((g) => g.messageId === query && g.guildId === interaction.guild.id);
 
-        // If no giveaway was found
         if (!giveaway) {
             return interaction.reply({
                 content: 'Unable to find a giveaway for `' + query + '`.',
@@ -45,10 +41,8 @@ module.exports = {
             });
         }
 
-        // Reroll the giveaway
         client.giveawaysManager.reroll(giveaway.messageId)
             .then(() => {
-                // Success message
                 interaction.reply(`Rerolled **[this giveaway](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId})!**`);
             })
             .catch((e) => {
