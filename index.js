@@ -65,7 +65,6 @@ client.commands = new Discord.Collection();
 
 
 client.interactions = new Discord.Collection();
-
 client.register_arr = []
 
 fs.readdir("./slash/", (_err, files) => {
@@ -83,9 +82,7 @@ fs.readdir("./slash/", (_err, files) => {
 
 client.on("messageCreate", (message) => {
     if (message.author.bot) return false;
-
     if (message.content.includes("@here") || message.content.includes("@everyone") || message.type == "REPLY") return false;
-
     if (message.mentions.has(client.user.id)) {
       const botmention = new Discord.MessageEmbed()
       .setColor('#2F3136')
@@ -93,6 +90,5 @@ client.on("messageCreate", (message) => {
         message.reply({embeds: [botmention]});
     }
 });
-
 
 client.login(process.env.TOKEN);
