@@ -1,5 +1,6 @@
 # IVON Technologies
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+<a href="https://www.producthunt.com/posts/giveaway-bot-for-discord?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-giveaway&#0045;bot&#0045;for&#0045;discord" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=350255&theme=light" alt="Giveaway&#0032;Bot&#0032;for&#0032;Discord - discord&#0032;bot | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 [![ivonbadge](https://i.imgur.com/1TLIl08.png)](https://ivon.netlify.app)
 
 ### The perfect giveaway bot to host giveaways easily on your server build with discord.js
