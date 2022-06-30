@@ -4,7 +4,7 @@ const config = require('../config.json');
 module.exports.run = async (client, message, args) => {
   let m = await message.reply("Sending request to websocket...")
   let pong = new Discord.MessageEmbed()
-    .setTitle("<:pong:925365898804604928> Pong!")
+    .setTitle("Pong!")
     .setColor('#2F3136')
     .setThumbnail(process.env.THUMBNAIL)
     .setTimestamp()
