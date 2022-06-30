@@ -15,7 +15,7 @@ module.exports = {
 
         if (!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")) {
             return interaction.reply({
-                content: '<:wrong:984664520364552192> You need to have the manage messages permissions to pause giveaways.',
+                content: '❌ You need to have the manage messages permissions to pause giveaways.',
                 ephemeral: true
             });
         }
