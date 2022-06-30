@@ -5,7 +5,7 @@ module.exports = {
     description: '🏓Check my ping!',
     run: async (client, interaction) => {
       let pembed = new MessageEmbed()
-		  .setTitle("<:pong:925365898804604928> Pong!")
+		  .setTitle("Pong!")
       .setColor('#2F3136')
       .setThumbnail(process.env.THUMBNAIL)
 		  .addField('**Latency**', `\`\`\`ini\n${Date.now() - interaction.createdTimestamp}ms\n\`\`\``)
