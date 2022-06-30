@@ -63,13 +63,13 @@ const embed = new MessageEmbed()
                 label: `Giveaways`,
                 value: `giveaway`,
                 description: `View all the giveaway based commands!`,
-                emoji: `<:confetti:973495590921043968>`
+                emoji: `🎉`
             },
             {
                 label: `General`,
                 value: `general`,
                 description: `View all the general bot commands!`,
-                emoji: `<:config:919489653546045440>`
+                emoji: `🎉`
             }
         ])
     ),
