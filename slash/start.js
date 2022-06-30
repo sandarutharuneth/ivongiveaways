@@ -60,7 +60,7 @@ module.exports = {
 
     if (!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")) {
       return interaction.reply({
-        content: '<:wrong:984664520364552192> You need to have the manage messages permissions to start giveaways.',
+        content: '❌ You need to have the manage messages permissions to start giveaways.',
         ephemeral: true
       });
     }
@@ -72,19 +72,19 @@ module.exports = {
 
     if (!giveawayChannel.isText()) {
       return interaction.reply({
-        content: '<:wrong:984664520364552192> Please select a text channel!',
+        content: '❌ Please select a text channel!',
         ephemeral: true
       });
     }
    if(isNaN(ms(giveawayDuration))) {
     return interaction.reply({
-      content: '<:wrong:984664520364552192> Please select a valid duration!',
+      content: '❌ Please select a valid duration!',
       ephemeral: true
     });
   }
     if (giveawayWinnerCount < 1) {
       return interaction.reply({
-        content: '<:wrong:984664520364552192> Please select a valid winner count! greater or equal to one.',
+        content: '❌ Please select a valid winner count! greater or equal to one.',
       })
     }
 
@@ -96,7 +96,7 @@ module.exports = {
     if (bonusRole) {
       if (!bonusEntries) {
         return interaction.reply({
-          content: `<:wrong:984664520364552192> You must specify how many bonus entries would ${bonusRole} recieve!`,
+          content: `❌ You must specify how many bonus entries would ${bonusRole} recieve!`,
           ephemeral: true
         });
       }
@@ -133,13 +133,13 @@ module.exports = {
     }
 
     if (rolereq && !invite) {
-      messages.inviteToParticipate = `**React with <:confetti:973495590921043968> to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!`
+      messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!`
     }
     if (rolereq && invite) {
-      messages.inviteToParticipate = `**React with <:confetti:973495590921043968> to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!\n- Members are required to join [this server](${invite}) to participate in this giveaway!`
+      messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!\n- Members are required to join [this server](${invite}) to participate in this giveaway!`
     }
     if (!rolereq && invite) {
-      messages.inviteToParticipate = `**React with <:confetti:973495590921043968> to participate!**\n>>> - Members are required to join [this server](${invite}) to participate in this giveaway!`
+      messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> - Members are required to join [this server](${invite}) to participate in this giveaway!`
     }
 
 
