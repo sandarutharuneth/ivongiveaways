@@ -1,5 +1,5 @@
 # IVON Technologies
-[![ivonbadge](https://i.imgur.com/1TLIl08.png)](https://ivon.netlify.app)
+[![ivon](https://i.imgur.com/1TLIl08.png)](https://ivon.netlify.app)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 ### The perfect giveaway bot to host giveaways easily on your server build with discord.js
 ## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
