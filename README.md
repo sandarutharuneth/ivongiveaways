@@ -104,6 +104,6 @@ pm2 start --name "ivongiveaways" index.js --watch
 </a>  
 </div> 
   
-# Contributers
+# Contributors
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=sandarutharuneth/ivongiveaways)
