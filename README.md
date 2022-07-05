@@ -8,7 +8,6 @@
 - ### This Giveaway Bot Was Created by [Sandaru Tharuneth](https://sandarutharuneth.com/) with the inspiration of [ZeroDiscord's Giveaway](https://github.com/ZeroDiscord) bot.
 - [Website](https://ivon.netlify.app) [![Netlify Status](https://api.netlify.com/api/v1/badges/0e4ac4fc-dd7e-475f-a450-07dac264b53f/deploy-status)](https://app.netlify.com/sites/ivon/deploys)
 - [Become a Patreon](https://www.patreon.com/projectrazer)
-- [Support Server Link](https://discord.gg/cqSEc9FNrE)
 - [![Support Server](https://img.shields.io/discord/886462690153857054?label=Support%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white) ](https://discord.gg/cqSEc9FNrE)
 ## Licensed Under
 ### Creative Commons IVON v2.0 Universal
