@@ -6,7 +6,7 @@
 ## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
 ## Links
 - ### This Giveaway Bot Was Created by [Sandaru Tharuneth](https://sandarutharuneth.com/) with the inspiration of [ZeroDiscord's Giveaway](https://github.com/ZeroDiscord) bot.
-- [![Netlify Status](https://api.netlify.com/api/v1/badges/0e4ac4fc-dd7e-475f-a450-07dac264b53f/deploy-status)](https://app.netlify.com/sites/ivon/deploys)
+- <a href='https://ivon.netlify.app' target="_blank"><img alt='netlify' src='https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=netlify&logoColor=white&labelColor=04AD7D&color=90FFA7'/></a>
 - <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
 - [![Support Server](https://img.shields.io/discord/886462690153857054?label=Support%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white) ](https://discord.gg/cqSEc9FNrE)
 ## Licensed Under
