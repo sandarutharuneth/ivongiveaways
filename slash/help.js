@@ -41,8 +41,6 @@ module.exports = {
       .addFields(
         { name: 'Help', value: `Show the help menu.\n > **Types: \`/help\`**`, inline: true },
         { name: 'About', value: `Show About Ivon.\n > **Types: \`/about\`**`, inline: true },
-        { name: 'Server Info', value: `Shows server info.\n > **Types: \`/serverinfo\`**`, inline: true },
-        { name: 'User Info', value: `Shows user info.\n > **Types: \`/userinfo\`**`, inline: true },
         { name: 'Invite', value: `Get the bot's invite link.\n > **Types: \`/invite\`**`, inline: true },
         { name: 'Ping', value: `Check the bot's ping!\n > **Types: \`/ping\`**`, inline: true },
         { name: 'System', value: `Check the bot's System info.\n > **Types: \`/info\`**`, inline: true },
