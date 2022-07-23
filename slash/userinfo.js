@@ -105,22 +105,26 @@ const response = await fetch(
 
 
             const UserInfoEm = new MessageEmbed()
-                .setColor("BLURPLE")
-                .setAuthor(member.user.tag, member.user.displayAvatarURL({ dynamic: true }))
+                .setColor("2f3136")
+                .setTitle('**WHO THE HELL IS THIS?**')
                 .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
-                .addFields(
-                    { name: `Avatar:`, value: `[PNG](${avpng})`, inline: true },
-                    { name: `Joined Discord At:`, value: `${joinedDiscordAt}`, inline: true },
-                    { name: `Bot:`, value: `${isBot}`, inline: true },
-                    { name: `Badges:`, value: `${badges}`, inline: true },
-                    { name: `Status:`, value: `${status}`, inline: true },
-                    { name: `Activity:`, value: `${userstatus}`, inline: true },
-                    { name: `Highest Role:`, value: `${highestRole}`, inline: true },
-                    { name: `Roles:`, value: `[${totalRoles}] -\n ${Roles}`, inline: true },
-{ name: `Permissions:`, value: `${memberPermissons}`, inline: true },
-         )
-              .setDescription(`**User Info**`)
-              .setFooter(`ID - ${member.user.id} | Joined Server At - ${joinedServerAt}`)
+                
+              .setDescription(`
+              **Name:** \`${member.user.username}\`
+                Nickname: **${member.nickname}**
+                Tag: **${member.user.tag}**
+                ID: **${member.user.id}**
+                Avatar: [PNG](${avpng})\n
+              **Creation:** \`${joinedDiscordAt}\`
+              **Joined:** \`${joinedServerAt}\`
+              **Bot:** ${isBot}
+              **Discord Badges:** ${badges}\n
+              **Status:** \n${status}\n
+              **Activity:** \n${userstatus}\n
+              **Highest Role:** \n${highestRole}\n
+              **Roles:** \n${Roles}\n
+              **Permissions:** \n\`\`\`ini\n[ ${memberPermissons} ]\`\`\``)
+              .setFooter({ text: '©️ IVON', iconURL: (process.env.FOOTERIMG) })
             await interaction.reply({
                 content: `Information about **${member.user.tag}**`,
                 embeds: [UserInfoEm]
