@@ -8,8 +8,8 @@ module.exports = {
 		  .setTitle("Pong!")
       .setColor('#2F3136')
       .setThumbnail(process.env.THUMBNAIL)
-		  .addField('**Latency**', `\`\`\`ini\n${Date.now() - interaction.createdTimestamp}ms\n\`\`\``)
-		  .addField('**API Latency**', `\`\`\`ini\n${Math.round(client.ws.ping)}ms\n\`\`\``)
+		  .addField('**Latency**', `\`\`\`ini\n[ ${Date.now() - interaction.createdTimestamp}ms ]\n\`\`\``)
+		  .addField('**API Latency**', `\`\`\`ini\n[ ${Math.round(client.ws.ping)}ms ]\n\`\`\``)
 		  .setTimestamp()
                   .setFooter({
         text: `©️ IVON`, 
