@@ -1,15 +1,23 @@
-const Discord = require("discord.js")
+const { MessageEmbed, MessageButton, MessageActionRow } = require("discord.js")
 module.exports = {
   async execute(giveaway, member) {
     return member.send({
-      embeds: [new Discord.MessageEmbed()
+      components: [new MessageActionRow()
+                    .addComponents(
+                          new MessageButton()
+                      .setLabel("Jump to the Giveaway")
+                      .setStyle("LINK")
+                      .setURL(`https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}`)
+                      .setEmoji('973495590921043968'))],
+      embeds: [new MessageEmbed()
         .setTimestamp()
-        .setTitle('Hold Up!! Did You Just Remove a Reaction From A Giveaway?')
+        .setAuthor({name: "Reaction Removed!", iconURL: "https://i.imgur.com/Jjo00oT.png"})
+        .setTitle('Did You Just Remove a Reaction From A Giveaway?')
         .setColor("#2F3136")
         .setDescription(
-          `Your entery to **${giveaway.prize}** on [This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) was recorded but you un-reacted, since you don't need **${giveaway.prize}** I would have to choose someone else. \n\n [Invite](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) | [Twitter](https://twitter.com/razerofficials) | [Patreon](https://www.patreon.com/projectrazer)`
+          `Your entery to **${giveaway.prize}** on [This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) have been removed!\n This means you're removed as a valid giveaway participant.\n Think It was a mistake? **Go react again!**`
         )
-        .setFooter({ text: "Think It was a mistake? Go react again!" })
+        .setFooter({ text: "©️ IVON", iconURL: (process.env.FOOTERIMG) })
       ]
     }).catch(e => {})
 
