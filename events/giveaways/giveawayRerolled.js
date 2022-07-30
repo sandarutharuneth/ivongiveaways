@@ -24,7 +24,7 @@ module.exports = {
           .setAuthor({name: "Congratulations!", iconURL: (process.env.THUMBNAIL)})
           .setThumbnail(process.env.THUMBNAIL)
           .setColor("#2F3136")
-          .setDescription(`Hello there ${member.user}\n Host of the giveaway rerolled and you have won the Giveaway on **[This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId})**\nGood Job On Winning **${giveaway.prize}!**\n DM the host to claim your prize!!`)
+          .setDescription(`Hello there ${member.user}\n Host of the giveaway rerolled and you have won the Giveaway on **[This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId})**\nGood Job On Winning **${giveaway.prize}!**\n DM ${giveaway.hostedBy} to claim your prize!!`)
           .setTimestamp()
           .setFooter({
             text: "©️ IVON", 
