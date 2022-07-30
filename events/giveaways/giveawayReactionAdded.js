@@ -25,7 +25,7 @@ module.exports = {
     .setColor("#2F3136")
     .setAuthor({name: "Entry Confirmed!", iconURL: "https://i.imgur.com/Lf1IHlA.png"})    
     .setDescription(
-      `Your entry to **${giveaway.prize}** on [This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) has been approved! \nEarn extra points by **Voting**.`
+      `Your entry to **${giveaway.prize}** on [This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) has been approved! \nEarn extra points by **Voting**. \n Hosted By: ${giveaway.hostedBy}`
     )
     .setFooter({ text: "©️ IVON", iconURL: (process.env.FOOTERIMG) })
     .setTimestamp()
@@ -54,7 +54,7 @@ module.exports = {
     .setColor("#2F3136")
     .setAuthor({name: "Entry Denied!", iconURL: "https://i.imgur.com/Jjo00oT.png"})    
     .setDescription(
-      `Your entry to **${giveaway.prize}** on [This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) has been denied! \nPlease review the requirements to enter the giveaway properly.`
+      `Your entry to **${giveaway.prize}** on [This Server](https://discord.com/channels/${giveaway.guildId}/${giveaway.channelId}/${giveaway.messageId}) has been denied! \nPlease review the requirements to enter the giveaway properly. \n Hosted By: ${giveaway.hostedBy}`
     )
     .setFooter({ text: "©️ IVON", iconURL: (process.env.FOOTERIMG) })
 
