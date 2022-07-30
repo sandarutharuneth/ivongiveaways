@@ -25,7 +25,7 @@ module.exports = {
           .setAuthor({name: "Congratulations!", iconURL: "https://i.imgur.com/sB02Hbz.png"})
           .setColor("#2F3136")
           .setThumbnail(process.env.THUMBNAIL)
-          .setDescription(`Hello there ${member.user}\n Congrats!! you have won **${giveaway.prize}!**\n DM the host to claim your prize!`)
+          .setDescription(`Hello there ${member.user}\n Congrats!! you have won **${giveaway.prize}!**\n DM ${giveaway.hostedBy} to claim your prize!`)
           .setImage('https://i.imgur.com/uQFQGrH.png')
           .setTimestamp()
           .setFooter({
