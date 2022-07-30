@@ -150,6 +150,8 @@ module.exports = {
       duration: ms(giveawayDuration),
       // The giveaway prize
       prize: giveawayPrize,
+      // The giveaway Host
+      hostedBy: `<@${interaction.user.id}>`,
       // The giveaway winner count
       winnerCount: parseInt(giveawayWinnerCount),
       // BonusEntries If Provided
