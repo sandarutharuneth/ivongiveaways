@@ -183,7 +183,7 @@ module.exports = {
         )
         .setColor("#2F3136")
         .setTimestamp();
-      giveawayChannel.send({ embeds: [giveaway, invite] });
+      giveawayChannel.send({ embeds: [giveaway] });
     }
 
     if (invite) {
