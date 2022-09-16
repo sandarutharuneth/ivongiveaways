@@ -11,15 +11,12 @@
 ## Licensed Under
 ### Creative Commons IVON v2.0 Universal
 [View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
-#### Copyright 2022 © All Rights are Reserved 
-
-# Repostory
-
-<p align="center">
+<p align="right">
   <a href="https://github.com/sandarutharuneth/ivongiveaways/" target="_blank"> 
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=sandarutharuneth&repo=ivongiveaways&theme=react" alt="Readme-Card.png">
   </a>
 </p>
+#### Copyright 2022 © All Rights are Reserved 
 
 # Code of Conduct
 
