@@ -13,7 +13,7 @@
 [View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
 #### Copyright 2022 © All Rights are Reserved
 
-# GIve us a Star
+# Give us a Star
 <p align="center">
   <a href="https://github.com/sandarutharuneth/ivongiveaways/" target="_blank"> 
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=sandarutharuneth&repo=ivongiveaways&theme=react" alt="Readme-Card.png">
