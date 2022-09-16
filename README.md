@@ -9,6 +9,7 @@
 - <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
 - [![Support Server](https://img.shields.io/discord/886462690153857054?label=Support%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white) ](https://discord.gg/cqSEc9FNrE)
 ## Licensed Under
+<p>
 ### Creative Commons IVON v2.0 Universal
 [View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
 #### Copyright 2022 © All Rights are Reserved
@@ -16,6 +17,7 @@
   <a href="https://github.com/sandarutharuneth/ivongiveaways/" target="_blank"> 
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=sandarutharuneth&repo=ivongiveaways&theme=react" alt="Readme-Card.png">
   </a>
+  </p>
 </p>
 
 # Code of Conduct
