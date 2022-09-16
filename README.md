@@ -19,7 +19,7 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=sandarutharuneth&repo=ivongiveaways&theme=react" alt="Readme-Card.png">
   </a>
 </p>
-
+<a href="https://discordbotlist.com/bots/973436715819745290"><img src="https://discordbotlist.com/api/v1/bots/973436715819745290/widget"></a>
 # Code of Conduct
 
 Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
