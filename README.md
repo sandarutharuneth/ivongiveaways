@@ -9,7 +9,7 @@
 - <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
 - [![Support Server](https://img.shields.io/discord/886462690153857054?label=Support%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white) ](https://discord.gg/cqSEc9FNrE)
 ## Licensed Under
-### Creative Commons IVON v2.0 Universal
+### Creative Commons CC0 v1.0 Universal
 [View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
 #### Copyright 2022 © All Rights are Reserved
 
@@ -27,7 +27,7 @@ Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/
 
 # You can run the bot in just a few steps! Let me show you how:
 ## Hosting 
-> ⚠  This bot needs a [Node.js v16+](https://nodejs.org/en/blog/release/v16.0.0/)  runtime to function since discord.js version 13 requires said node version to function.
+> ⚠  This bot needs a [Node.js v16+](https://nodejs.org/en/blog/release/v16.0.0/)  runtime to function since discord.js version 13 requires node version to function.
 
 [![Run on Repl.it](https://repl.it/badge/github/sandarutharuneth/ivongiveaways)](https://repl.it/github/sandarutharuneth/ivongiveaways)
 
