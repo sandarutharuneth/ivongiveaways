@@ -76,7 +76,7 @@ pm2 start --name "ivongiveaways" index.js --watch
 ```
 
 # Features
-## Featuring | Slash Commands 
+## Featuring | Slash Only Giveaway Commands 
 ➖
 <b>
   
