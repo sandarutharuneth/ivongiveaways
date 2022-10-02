@@ -26,7 +26,7 @@ module.exports.run = async (client, message, args) => {
           iconURL: client.user.displayAvatarURL() 
      })  
     .setTitle("Vote for **IVON**")
-    .setDescription(`Vote for **${client.user}** on [discordbotlist.com](https://discordbotlist.com). Your siple vote help us to grow more and more.`)
+    .setDescription(`Vote for **${client.user}** on [discordbotlist.com](https://discordbotlist.com). Your simple vote help us to grow more and more.`)
     .setColor('#2F3136')
     .setTimestamp()
     .setThumbnail(process.env.THUMBNAIL)
