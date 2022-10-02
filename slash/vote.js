@@ -10,13 +10,17 @@ module.exports = {
         .setLabel(`Vote on Discord Bot List`)
         .setStyle('LINK')
         .setEmoji('974160940197113916')
-        .setURL(`https://discordbotlist.com/bots/ivon`),
+        .setURL(``), //Your bot list link
         new MessageButton()
         .setLabel('Invite IVON')
         .setStyle('LINK')
         .setEmoji('973537545289875486')
-        .setURL(`https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands`),
+        .setURL(``), //Your invite link
     )
+    
+    //Unfortunately you cannot add your bot on top.gg unless you make significant changes on commands or making some new advanced commands to your bot code.
+    //But you can add your bot on Discord bot list
+    
     let invite = new MessageEmbed()
       .setAuthor({ 
           name: `${client.user.username}`, 
