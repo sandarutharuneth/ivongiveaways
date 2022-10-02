@@ -10,8 +10,7 @@
 - <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
 - [![Support Server](https://img.shields.io/discord/886462690153857054?label=Support%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white) ](https://discord.gg/cqSEc9FNrE)
 - <a href="https://top.gg/bot/973436715819745290">
-  <img src="https://top.gg/api/widget/owner/973436715819745290.svg">
-</a>
+  <img src="https://top.gg/api/widget/owner/973436715819745290.svg"></a>
 ## Licensed Under
 ### Creative Commons CC0 v1.0 Universal
 [View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
