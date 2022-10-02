@@ -6,11 +6,12 @@
 <a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://imgur.com/xeiSck4.png" title="source: imgur.com" /></a>
 ## Links
 - ### This Giveaway Bot Was Created by [Sandaru Tharuneth](https://sandarutharuneth.com/) with the inspiration of [ZeroDiscord's Giveaway](https://github.com/ZeroDiscord) bot.
+- - <a href="https://top.gg/bot/973436715819745290">
+  <img src="https://top.gg/api/widget/owner/973436715819745290.svg"></a>
 - <a href='https://ivon.netlify.app' target="_blank"><img alt='netlify' src='https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=netlify&logoColor=white&labelColor=04AD7D&color=90FFA7'/></a>
 - <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
 - [![Support Server](https://img.shields.io/discord/886462690153857054?label=Support%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white) ](https://discord.gg/cqSEc9FNrE)
-- <a href="https://top.gg/bot/973436715819745290">
-  <img src="https://top.gg/api/widget/owner/973436715819745290.svg"></a>
+
 ## Licensed Under
 ### Creative Commons CC0 v1.0 Universal
 [View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
