@@ -9,6 +9,7 @@
 - <a href='https://ivon.netlify.app' target="_blank"><img alt='netlify' src='https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=netlify&logoColor=white&labelColor=04AD7D&color=90FFA7'/></a>
 - <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
 - [![Support Server](https://img.shields.io/discord/886462690153857054?label=Support%20Server&logo=Discord&colorB=5865F2&style=for-the-badge&logoColor=white) ](https://discord.gg/cqSEc9FNrE)
+- [![Discord Bots](https://top.gg/api/widget/owner/973436715819745290.svg)(https://top.gg/bot/973436715819745290)
 ## Licensed Under
 ### Creative Commons CC0 v1.0 Universal
 [View the license here](https://github.com/sandarutharuneth/ivongiveaways/blob/master/LICENSE)
