@@ -3,7 +3,7 @@
 <a href="https://imgur.com/1TLIl08"><img src="https://i.imgur.com/1TLIl08.png" title="source: imgur.com" /></a>
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) <br>
 ## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
-<a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://imgur.com/xeiSck4.png" title="source: imgur.com" /></a>
+<a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/6WGNdPD.png" title="source: imgur.com" /></a>
 ## Links
 - ### This Giveaway Bot Was Created by [Sandaru Tharuneth](https://sandarutharuneth.com/) with the inspiration of [ZeroDiscord's Giveaway](https://github.com/ZeroDiscord) bot.
 - - <a href="https://top.gg/bot/973436715819745290">
