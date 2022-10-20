@@ -95,4 +95,6 @@ client.on("messageCreate", (message) => {
 });
 
 // Login through the client
-client.login(process.env.TOKEN);
+client.login(config.token);
+// Use this if you're using Replit and delete the line above.
+// client.login(process.env.TOKEN);
