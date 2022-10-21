@@ -43,12 +43,6 @@ module.exports = {
       required: false
     },
     {
-      name: 'invite',
-      description: 'Invite of the server you want to add as giveaway joining requirement',
-      type: 'STRING',
-      required: false
-    },
-    {
       name: 'role',
       description: 'Role you want to add as giveaway joining requirement',
       type: 'ROLE',
@@ -92,7 +86,6 @@ module.exports = {
     const bonusRole = interaction.options.getRole('bonusrole')
     const bonusEntries = interaction.options.getInteger('bonusamount')
     let rolereq = interaction.options.getRole('role')
-    let invite = interaction.options.getString('invite')
 
     if (bonusRole) {
       if (!bonusEntries) {
@@ -105,44 +98,10 @@ module.exports = {
 
 
     await interaction.deferReply({ ephemeral: true })
-    let reqinvite;
-    if (invite) {
-      let invitex = await client.fetchInvite(invite)
-      let client_is_in_server = client.guilds.cache.get(
-        invitex.guild.id
-      )
-      reqinvite = invitex
-      if (!client_is_in_server) {
-        return interaction.editReply({
-          embeds: [{
-            color: "#2F3136",
-            author: {
-              name: client.user.username,
-              iconURL: client.user.displayAvatarURL() 
-            },
-            title: "Server Check!",
-            description:
-              "Oops! New server detected! are you sure I am in that? You need to invite me there to set that as a requirement!",
-            timestamp: new Date(),
-            footer: {
-              iconURL: client.user.displayAvatarURL(),
-              text: "Server Check"
-            }
-          }]
-        })
-      }
-    }
 
-    if (rolereq && !invite) {
+    if (rolereq) {
       messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!`
     }
-    if (rolereq && invite) {
-      messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!\n- Members are required to join [this server](${invite}) to participate in this giveaway!`
-    }
-    if (!rolereq && invite) {
-      messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> - Members must join the reqired server to participate in this giveaway!`
-    }
-
 
     // start giveaway
     client.giveawaysManager.start(giveawayChannel, {
@@ -165,7 +124,6 @@ module.exports = {
       // Messages
       messages,
       extraData: {
-        server: reqinvite == null ? "null" : reqinvite.guild.id,
         role: rolereq == null ? "null" : rolereq.id,
       }
     });
