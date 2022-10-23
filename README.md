@@ -13,7 +13,7 @@
 
 
 ## Support Server
-<a href="https://discord.gg/cqSEc9FNrE"><img src="https://discord.com/api/guilds/886462690153857054/widget.png?style=banner1"></a>
+<a href="https://discord.gg/cqSEc9FNrE"><img src="https://discord.com/api/guilds/886462690153857054/widget.png?style=banner2"></a>
 
 ## Licensed Under
 ### Creative Commons CC0 v1.0 Universal
