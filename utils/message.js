@@ -10,7 +10,7 @@ module.exports = {
   color: "#2F3136",
   inviteToParticipate: `React with 🎉 to participate!`,
   winMessage: "Congratulations, {winners}! You won **{this.prize}**!",  
-  embedFooter: "Giveaways",
+  embedFooter: `{this.winnerCount} winners`,
   noWinner: "Giveaway cancelled, no valid participations.",
   hostedBy: "Hosted by: {this.hostedBy}",
   winners: "winner(s)",
