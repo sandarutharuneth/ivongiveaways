@@ -26,7 +26,8 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=sandarutharuneth&repo=ivongiveaways&theme=react" alt="Readme-Card.png">
   </a>
 </p>
-## Code of Conduct
+
+# Code of Conduct
 
 Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
 
@@ -118,3 +119,5 @@ pm2 start --name "ivongiveaways" index.js --watch
 # Contributors
 
 ![GitHub Contributors Image](https://contrib.rocks/image?repo=sandarutharuneth/ivongiveaways)
+
+<h6 align="center">©️ Project Razer</h6>
