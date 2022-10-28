@@ -26,11 +26,9 @@
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=sandarutharuneth&repo=ivongiveaways&theme=react" alt="Readme-Card.png">
   </a>
 </p>
-# Code of Conduct
+## Code of Conduct
 
 Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/blob/master/CODE_OF_CONDUCT.md) for details on our code of conduct.
-
-[![forthebadge](https://forthebadge.com/images/badges/it-works-why.svg)](https://forthebadge.com)
 
 # You can run the bot in just a few steps! Let me show you how:
 ## Hosting 
@@ -86,12 +84,15 @@ pm2 start --name "ivongiveaways" index.js --watch
 ➖
 <b>
   
-### Interactive Giveaway Creation
-  
+### Interactive Giveaway Creation 
+➖
+<b>
+
+### Basic Utility Commands
 ➖
 <b>
   
-### Featured ✨ Bonus Entries 
+### Featured Bonus Entries 
 ➖
 <b>
 
