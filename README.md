@@ -4,6 +4,13 @@
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) <br>
 ## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
 <a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/l3kbuI4.png" title="source: imgur.com" /></a>
+
+## Developers
+<div>
+  <img src="https://discord.c99.nl/widget/theme-3/768741356297912331.png" align="right">
+  <img src="https://discord.c99.nl/widget/theme-3/846193169758814228.png" align="left">
+</div>
+
 ## Links
 - ### This Giveaway Bot Was Created by [Sandaru Tharuneth](https://sandarutharuneth.com/) with the inspiration of [ZeroDiscord's Giveaway](https://github.com/ZeroDiscord) bot.
 - <a href="https://top.gg/bot/973436715819745290">
