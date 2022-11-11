@@ -6,8 +6,8 @@
 <a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/l3kbuI4.png" title="source: imgur.com" /></a>
 ## Developers
 <p>
-  <img src="https://discord.c99.nl/widget/theme-2/768741356297912331.png" align="right">
-  <img src="https://discord.c99.nl/widget/theme-2/846193169758814228.png" align="left">
+  <img src="https://discord.c99.nl/widget/theme-2/768741356297912331.png" align="center"> <br>
+  <img src="https://discord.c99.nl/widget/theme-2/846193169758814228.png" align="center">
 </p>
 
 ## Links
