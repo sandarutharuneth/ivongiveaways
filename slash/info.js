@@ -30,9 +30,11 @@ client.guilds.cache.forEach((guild) => {
     .setColor('#2F3136')
     .setThumbnail(process.env.THUMBNAIL)
     .setTimestamp()
-    .addField("\Server", `\`\`\`ini\n[ ${client.guilds.cache.size} ]\n\`\`\``, true)
-    .addField("Users", `\`\`\`ini\n[ ${mcount} ]\n\`\`\``, true)
-    .addField("Channels", `\`\`\`ini\n[ ${ccount} ]\n\`\`\``, true)
+    .addFields(
+        { name: "\Server", value: `\`\`\`ini\n[ ${client.guilds.cache.size} ]\n\`\`\``, inline: true },
+        {name: "Users", value: `\`\`\`ini\n[ ${mcount} ]\n\`\`\``, inline: true },
+        {name: "Channels", value: `\`\`\`ini\n[ ${ccount} ]\n\`\`\``, inline: true}
+               )
     .setDescription(`
 **= STATISTICS =**
 > **• Discord.js** : v13.6.0
