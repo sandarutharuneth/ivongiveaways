@@ -1,4 +1,5 @@
 # IVON Technologies
+`This code is mostly depricated. New Code will be updated soon`
 ### The perfect giveaway bot to host giveaways easily on your server build with discord.js
 <a href="https://imgur.com/1TLIl08"><img src="https://i.imgur.com/1TLIl08.png" title="source: imgur.com" /></a>
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) <br>
