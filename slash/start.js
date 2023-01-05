@@ -144,26 +144,6 @@ module.exports = {
       giveawayChannel.send({ embeds: [giveaway] });
     }
 
-    if (invite) {
-      let giveaway = new Discord.MessageEmbed()
-        .setAuthor({ name: `Server Joining Required!` })
-        .setDescription(`**You need to join this server to enter the giveaway!**\n Join the server by clicking the button \n Join the server first and react 🎉 to participate \n Afraid of buttons? Here is the [link](${invite})`)
-        .setImage('https://i.imgur.com/JXQeKyr.png')
-        .setColor("#2F3136")
-        .setFooter({ text: '©️ IVON', iconURL: (process.env.FOOTERIMG) })
-        .setTimestamp();
-
-      const row = new MessageActionRow()
-    .addComponents(
-        new MessageButton()
-        .setLabel('Join the Server')
-        .setStyle('LINK')
-        .setEmoji('903201241184751618')
-        .setURL(`${invite}`))
-      
-      giveawayChannel.send({ embeds: [giveaway], components: [row] });
-    }
-
   }
 
 };
