@@ -1,8 +1,19 @@
-const Discord = require("discord.js");
-const client = new Discord.Client({ intents: 7753 });
+const Discord = require("discord.js")
+const { Client, GatewayIntentBits, Partials } = require("discord.js");
+const client = new Client({
+  partials: [
+    Partials.Channel, // for text channel
+    Partials.GuildMember, // for guild member
+    Partials.Reaction, // for message reaction
+  ],
+  intents: [
+    GatewayIntentBits.Guilds, // for guild related things
+    GatewayIntentBits.GuildMessages, // for guild messages things
+    GatewayIntentBits.GuildMessageReactions, // for message reactions things
+  ],
+});
 const fs = require("fs");
 const config = require("./config.json");
-const host = require("./host");
 client.config = config;
 
 // Initialise discord giveaways
@@ -15,12 +26,15 @@ client.giveawaysManager = new GiveawaysManager(client, {
     reaction: "🎉",
     lastChance: {
       enabled: true,
-      content: `📛 | **Last chance to enter**`,
+      content: `⚠️ **Last chance to enter**`,
       threshold: 5000,
       embedColor: '#2F3136'
     }
   }
 });
+
+/* Load all events (discord based) */
+
 
 fs.readdir("./events/discord", (_err, files) => {
   files.forEach(file => {
@@ -46,23 +60,6 @@ fs.readdir("./events/giveaways", (_err, files) => {
   })
 })
 
-// Let commands be a new collection ( message commands )
-client.commands = new Discord.Collection();
-/* Load all commands */
- fs.readdir("./commands/", (_err, files) => {
-  files.forEach(file => {
-    if (!file.endsWith(".js")) return;
-    let props = require(`./commands/${file}`);
-    let commandName = file.split(".")[0];
-    client.commands.set(commandName, {
-      name: commandName,
-      ...props
-    });
-    console.log(`[Command] ✅  Loaded: ${commandName}`);
-  });
-});
-
-
 // let interactions be a new collection ( slash commands  )
 client.interactions = new Discord.Collection();
 // creating an empty array for registering slash commands
@@ -81,18 +78,6 @@ fs.readdir("./slash/", (_err, files) => {
   });
 });
 
-client.on("messageCreate", (message) => {
-    if (message.author.bot) return false;
-
-    if (message.content.includes("@here") || message.content.includes("@everyone") || message.type == "REPLY") return false;
-
-    if (message.mentions.has(client.user.id)) {
-      const botmention = new Discord.MessageEmbed()
-      .setColor('#2F3136')
-      .setDescription('▶ **My Prefix:** `-` \n▶ **You can see my all commands type:** `-help`\n▶ **All the giveawy commands are availble on Slash**')
-        message.reply({embeds: [botmention]});
-    }
-});
 
 // Login through the client
 client.login(config.token);
