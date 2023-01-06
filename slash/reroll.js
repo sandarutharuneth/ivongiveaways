@@ -1,3 +1,5 @@
+const { ApplicationCommandOptionType } = require('discord.js');
+
 module.exports = {
     name: "reroll",
     description: '🎉 Reroll a giveaway',
@@ -6,7 +8,7 @@ module.exports = {
         {
             name: 'giveaway',
             description: 'The giveaway to reroll (message ID or prize)',
-            type: 'STRING',
+            type: ApplicationCommandOptionType.String,
             required: true
         }
     ],
@@ -16,7 +18,7 @@ module.exports = {
         // If the member doesn't have enough permissions
         if (!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")) {
             return interaction.reply({
-                content: '❌ | You need to have the manage messages permission to reroll giveaways.',
+                content: '<:x_:1010816180719722566> You need to have the manage messages permission to reroll giveaways.',
                 ephemeral: true
             });
         }
