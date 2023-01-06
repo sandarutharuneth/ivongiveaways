@@ -1,20 +1,20 @@
-const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 
 module.exports = {
   name: 'servericon',
   description: 'sends the Server Icon',
   run: async (client, interaction) => {
     
-const row = new MessageActionRow()
+const row = new ActionRowBuilder()
     .addComponents(
-        new MessageButton()
+        new ButtonBuilder()
         .setLabel(`Server Icon URL`)
-        .setStyle('LINK')
+        .setStyle(ButtonStyle.Link)
         .setURL(`${interaction.guild.iconURL()}?size=1024`))
 
-    let embed = new MessageEmbed()
+    let embed = new EmbedBuilder()
     .setAuthor({ name: interaction.guild.name })
-    .setImage(interaction.guild.iconURL({ dynamic: true, size: 512 }))
+    .setImage(interaction.guild.iconURL({ dynamic: true, size: 1024 }))
     .setColor('#2F3136')
     .setFooter({
         text: `©️ IVON`, 
