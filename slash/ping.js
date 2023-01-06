@@ -1,19 +1,19 @@
-const { MessageEmbed } = require("discord.js")
+const { EmbedBuilder } = require('discord.js');
 
 module.exports = {
     name: 'ping',
     description: '🏓Check my ping!',
     run: async (client, interaction) => {
-      let pembed = new MessageEmbed()
+      let pembed = new EmbedBuilder()
 		  .setTitle("Pong!")
       .setColor('#2F3136')
-      .setThumbnail(process.env.THUMBNAIL)
-		  .addField('**Latency**', `\`\`\`ini\n[ ${Date.now() - interaction.createdTimestamp}ms ]\n\`\`\``)
-		  .addField('**API Latency**', `\`\`\`ini\n[ ${Math.round(client.ws.ping)}ms ]\n\`\`\``)
+      .setThumbnail('https://i.imgur.com/sB02Hbz.png')
+		  .addFields({name: '**Latency**', value: `\`\`\`ini\n[ ${Date.now() - interaction.createdTimestamp}ms ]\n\`\`\``, inline: true},
+			     {name: '**API Latency**', value: `\`\`\`ini\n[ ${Math.round(client.ws.ping)}ms ]\n\`\`\``, inline: true})
 		  .setTimestamp()
-                  .setFooter({
+      .setFooter({
         text: `©️ IVON`, 
-        iconURL: (process.env.FOOTERIMG)
+        iconURL: ('https://i.imgur.com/sB02Hbz.png')
     })
         interaction.reply({
           embeds: [pembed]
