@@ -1,5 +1,3 @@
-const { MessageEmbed } = require("discord.js");
-
 module.exports = (client, message) => {
     // return if author is a bot
     if (message.author.bot) return;
