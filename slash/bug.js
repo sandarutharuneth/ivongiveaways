@@ -1,5 +1,4 @@
-const { MessageEmbed, CommandInteraction, Client, MessageButton, MessageActionRow } = require('discord.js');
-const moment = require('moment');
+const { ApplicationCommandOptionType, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 
 module.exports = {
   name: "bug",
@@ -8,16 +7,23 @@ module.exports = {
     {
       name: 'describe',
       description: 'Describe the bug as much details as possible',
-      type: 'STRING',
+      type: ApplicationCommandOptionType.String,
       required: true
     },
+    {
+      name: 'image_link',
+      description: 'Link of the Screen shots of the case',
+      type: ApplicationCommandOptionType.String,
+      required: true
+    },  
   ],
 
   run: async (client, interaction) => {
 
     const channel = client.channels.cache.get(client.config.bug);
     const bugs = interaction.options.getString('describe');
-    const embed = new MessageEmbed()
+    const ss = interaction.options.getString('image_link');
+    const embed = new EmbedBuilder()
       .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
       .setTitle(`New Bug Report`)
       .setFields(
@@ -28,36 +34,37 @@ module.exports = {
         {name: 'Server ID', value: `\`${interaction.guild.id}\``, inline: true},
         {name: 'Creation Date', value: `<t:${parseInt(interaction.guild.createdTimestamp / 1000)}:R>`, inline: true},
       )
+      .setImage(ss)	
       .setDescription(`${bugs}`)
       .setColor('#2F3136')
       .setFooter({ text: `Reported by: ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true}) })
       .setTimestamp()
 
-    const userr = new MessageEmbed()
+    const userr = new EmbedBuilder()
      .setAuthor({ name: `${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true}) })
      .setThumbnail('https://i.imgur.com/Cbs7ljR.png') 
-     .setDescription("**Your Report Have Been Submitted!**\nCheck Your DM\nDM locked? Then check this [link](https://officialrazer.xyz/reports)")
+     .setDescription("<:success:997419321557012510> **Your Report Have Been Submitted!**\n<:invi:1000459192555024404><:dm:1010217254048251955> Check Your DM\n<:invi:1000459192555024404><:lock:1010213107651584101> DM locked? Then check this [link](https://officialrazer.xyz/reports)")
      .setColor('#2F3136')
 
-    const dm = new MessageEmbed()
+    const dm = new EmbedBuilder()
      .setAuthor({ name: `${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true}) })
      .setTitle('Little Notice for you') 
      .setDescription("By submitting the report, you're agreeing to our privacy policy and our terms of conditions at Project Razer LLC. All your reports and your user data will be recorded and stored until the casefile is done. Spam reports will result in a blacklist or permanent ban on all our products or services. Please use the report system wisely. Have a nice day and thanks for your report.")
      .setColor('#2F3136')
     .setFooter({ text: 'Project Razer LLC', iconURL: 'https://i.imgur.com/ewa2N7p.png' })
 
-    const row = new MessageActionRow()
+    const row = new ActionRowBuilder()
        .addComponents(
-    	new MessageButton()
+    	new ButtonBuilder()
     .setLabel("Read Privacy Policy")
-    .setStyle("LINK")
-    .setURL("https://www.officialrazer.xyz/privacy-policy")
+    .setStyle(ButtonStyle.Link)
+    .setURL("https://www.ivongiveaways.com/privacy-policy")
     .setEmoji('1010217251384868944'),
-    new MessageButton()
+    new ButtonBuilder()
     .setLabel("Read Terms of Service")
-    .setStyle("LINK")
+    .setStyle(ButtonStyle.Link)
     .setEmoji('1010217248843120790')
-    .setURL("https://www.officialrazer.xyz/terms-of-use"));
+    .setURL("https://www.ivongiveaways.com/terms-of-service"));
 
     
     channel.send({ embeds: [embed] });
