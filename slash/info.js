@@ -1,4 +1,4 @@
-const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js")
+const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 
 module.exports = {
     name: 'info',
@@ -10,25 +10,25 @@ client.guilds.cache.forEach((guild) => {
     mcount += guild.memberCount 
 })
 
-    const row = new MessageActionRow()
+    const row = new ActionRowBuilder()
 			.addComponents(
-        new MessageButton()
+        new ButtonBuilder()
     .setLabel(`Invite ${client.user.username}`)
-    .setStyle("LINK")
+    .setStyle(ButtonStyle.Link)
     .setURL("https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands")
     .setEmoji('973537545289875486'),
-        new MessageButton()
+        new ButtonBuilder()
     .setLabel("Donate")
-    .setStyle("LINK")
+    .setStyle(ButtonStyle.Link)
     .setURL("https://www.paypal.com/donate/?hosted_button_id=5AQSEPRZ6SNRG")
     .setEmoji('972037997262417960')
       )
   
-  let pembed = new MessageEmbed()
-    .setAuthor({name: "IVON", iconURL: "https://i.imgur.com/JkHM4c3.png" })
+  let pembed = new EmbedBuilder()
+    .setAuthor({name: "IVON", iconURL: "https://i.imgur.com/sB02Hbz.png" })
     .setTitle('Information')
     .setColor('#2F3136')
-    .setThumbnail(process.env.THUMBNAIL)
+    .setThumbnail('https://i.imgur.com/sB02Hbz.png')
     .setTimestamp()
     .addFields(
         { name: "\Server", value: `\`\`\`ini\n[ ${client.guilds.cache.size} ]\n\`\`\``, inline: true },
@@ -37,11 +37,11 @@ client.guilds.cache.forEach((guild) => {
                )
     .setDescription(`
 **= STATISTICS =**
-> **• Discord.js** : v13.6.0
-> **• Node**       : v17.7.2
+> **• Discord.js** : v14.7.1
+> **• Node**       : v19.3.0
 
 **= SYSTEM =**
-> **• Hosted**     : Dream Host
+> **• Hosting**     : Zap
 > **• Platform**   : Linux
 
 **= CPU =**
@@ -50,7 +50,7 @@ client.guilds.cache.forEach((guild) => {
 > **• Cores**      : 16`)
     .setFooter({
         text: `©️ IVON`, 
-        iconURL: (process.env.FOOTERIMG)
+        iconURL: ('https://i.imgur.com/sB02Hbz.png')
     })
         interaction.reply({
           embeds: [pembed], components: [row]
