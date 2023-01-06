@@ -2,6 +2,7 @@
   "token": "process.env.TOKEN", // Add your TOKEN in env file
   "bug": "1010019840901259364", // Channel ID for send the Bug Reports
   "prefix": "", // Set your Prefix Here
+  "embedColor": "#2f3136",
   "everyoneMention": false, // Enable or Disable @everyone mention on GIveaway Start
   "hostedBy": true // Giveaway Host data 
 }
