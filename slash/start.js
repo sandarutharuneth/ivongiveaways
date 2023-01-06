@@ -1,4 +1,5 @@
 const Discord = require("discord.js")
+const {  ApplicationCommandOptionType, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require("discord.js");
 const messages = require("../utils/message");
 const ms = require("ms")
 module.exports = {
@@ -9,43 +10,49 @@ module.exports = {
     {
       name: 'duration',
       description: 'How long the giveaway should last for. Example values: 1m, 1h, 1d',
-      type: 'STRING',
+      type: ApplicationCommandOptionType.String,
       required: true
     },
     {
       name: 'winners',
       description: 'How many winners the giveaway should have',
-      type: 'INTEGER',
+      type: ApplicationCommandOptionType.Integer,
       required: true
     },
     {
       name: 'prize',
       description: 'What the prize of the giveaway should be',
-      type: 'STRING',
+      type: ApplicationCommandOptionType.String,
       required: true
     },
     {
       name: 'channel',
       description: 'The channel to start the giveaway in',
-      type: 'CHANNEL',
+      type: ApplicationCommandOptionType.Channel,
       required: true
     },
     {
       name: 'bonusrole',
       description: 'Role which would recieve bonus entries',
-      type: 'ROLE',
+      type: ApplicationCommandOptionType.Role,
       required: false
     },
     {
       name: 'bonusamount',
       description: 'The amount of bonus entries the role will recieve',
-      type: 'INTEGER',
+      type: ApplicationCommandOptionType.Integer,
+      required: false
+    },
+    {
+      name: 'description',
+      description: 'Add more details about your giveaway',
+      type: ApplicationCommandOptionType.String,
       required: false
     },
     {
       name: 'role',
       description: 'Role you want to add as giveaway joining requirement',
-      type: 'ROLE',
+      type: ApplicationCommandOptionType.Role,
       required: false
     },
   ],
@@ -55,7 +62,7 @@ module.exports = {
     // If the member doesn't have enough permissions
     if (!interaction.member.permissions.has('MANAGE_MESSAGES') && !interaction.member.roles.cache.some((r) => r.name === "Giveaways")) {
       return interaction.reply({
-        content: '❌ | You need to have the manage messages permissions to start giveaways.',
+        content: ':x: You need to have the manage messages permissions to start giveaways.',
         ephemeral: true
       });
     }
@@ -65,32 +72,33 @@ module.exports = {
     const giveawayWinnerCount = interaction.options.getInteger('winners');
     const giveawayPrize = interaction.options.getString('prize');
 
-    if (!giveawayChannel.isText()) {
+    if (!giveawayChannel.isTextBased()) {
       return interaction.reply({
-        content: '❌ | Please select a text channel!',
+        content: ':x: Please select a text channel!',
         ephemeral: true
       });
     }
    if(isNaN(ms(giveawayDuration))) {
     return interaction.reply({
-      content: '❌ | Please select a valid duration!',
+      content: ':x: Please select a valid duration!',
       ephemeral: true
     });
   }
     if (giveawayWinnerCount < 1) {
       return interaction.reply({
-        content: '❌ | Please select a valid winner count! greater or equal to one.',
+        content: ':x: Please select a valid winner count! greater or equal to one.',
       })
     }
 
     const bonusRole = interaction.options.getRole('bonusrole')
     const bonusEntries = interaction.options.getInteger('bonusamount')
     let rolereq = interaction.options.getRole('role')
+    let invite = interaction.options.getString('description')
 
     if (bonusRole) {
       if (!bonusEntries) {
         return interaction.reply({
-          content: `❌ | You must specify how many bonus entries would ${bonusRole} recieve!`,
+          content: `:x: You must specify how many bonus entries would ${bonusRole} recieve!`,
           ephemeral: true
         });
       }
@@ -100,8 +108,15 @@ module.exports = {
     await interaction.deferReply({ ephemeral: true })
 
     if (rolereq) {
-      messages.inviteToParticipate = `**React with 🎉 to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!`
+      messages.inviteToParticipate = `**React with <:confetti:984296694357319730> to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!`
     }
+    if (rolereq && invite) {
+      messages.inviteToParticipate = `**React with <:confetti:984296694357319730> to participate!**\n>>> - Only members having ${rolereq} are allowed to participate in this giveaway!`
+    }
+    if (!rolereq && invite) {
+      messages.inviteToParticipate = `**React with <:confetti:984296694357319730> to participate!**\n>>> Read more details about this giveaway down below!`
+    }
+
 
     // start giveaway
     client.giveawaysManager.start(giveawayChannel, {
@@ -133,8 +148,24 @@ module.exports = {
       ephemeral: true
     })
 
+    if (invite) {
+      let des = new Discord.EmbedBuilder()
+        .setAuthor({ name: `Extra Details` })
+        .setDescription(`${invite}`)
+        .setColor("#2F3136");
+
+      const row = new ActionRowBuilder()
+    .addComponents(
+        new ButtonBuilder()
+        .setLabel('Twitter')
+        .setStyle(ButtonStyle.Link)
+        .setURL(`https://twitter.com/ivongiveaways`))
+
+      giveawayChannel.send({ embeds: [des], components: [row] });
+    }
+
     if (bonusRole) {
-      let giveaway = new Discord.MessageEmbed()
+      let giveaway = new Discord.EmbedBuilder()
         .setAuthor({ name: `Bonus Entries Alert!` })
         .setDescription(
           `**${bonusRole}** Has **${bonusEntries}** Extra Entries in this giveaway!`
