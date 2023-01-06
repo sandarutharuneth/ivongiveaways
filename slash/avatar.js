@@ -1,25 +1,25 @@
-const { MessageEmbed, MessageActionRow, MessageButton } = require('discord.js');
+const { ApplicationCommandOptionType, EmbedBuilder, ActionRowBuilder, ButtonBuilder, ButtonStyle } = require('discord.js');
 
 module.exports = {
   name: 'avatar',
   description: 'Shows User Avatar',
   options: [{
     name: 'user',
-    type: 'USER',
+    type: ApplicationCommandOptionType.User,
     description: 'Select a user',
     required: false,
   }],
   run: async (client, interaction) => {
     const user = interaction.options.getUser('user') || interaction.user
 
-    const row = new MessageActionRow()
+    const row = new ActionRowBuilder()
     .addComponents(
-        new MessageButton()
+        new ButtonBuilder()
         .setLabel(`Avatar URL`)
-        .setStyle('LINK')
+        .setStyle(ButtonStyle.Link)
         .setURL(`${user.displayAvatarURL({ dynamic: false, format: 'png', size: 1024 })}`))
 
-    const embed = new MessageEmbed()
+    const embed = new EmbedBuilder()
       .setTitle(`${user.username}'s Avatar`)
       .setColor('#2F3136')
       .setFooter({ text: `Requested by: ${interaction.user.username}`, iconURL: interaction.user.displayAvatarURL({ dynamic: true}) })
