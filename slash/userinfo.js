@@ -112,18 +112,18 @@ module.exports = {
                         .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
                         
                       .setDescription(`
-                      <:profile:1000770439406157904> **Name:** \`${member.user.username}\`
-                      <:invi:1000459192555024404><:next:1000472400049209385> Nickname: **${member.nickname}**
-                      <:invi:1000459192555024404><:next:1000472400049209385> Tag: **${member.user.tag}**
-                      <:invi:1000459192555024404><:next:1000472400049209385> ID: **${member.user.id}**
-                      <:invi:1000459192555024404><:next:1000472400049209385> Avatar: [PNG](${avpng})\n
-                      <:birthday:1000469205520502935> **Creation:** <t:${parseInt(member.user.createdTimestamp / 1000)}:R>
-                      <:calendar:1000469260390375554> **Joined:** <t:${parseInt(interaction.member.joinedTimestamp / 1000)}:R>
-                      <:bot:1000447056147652668> **Bot:** ${isBot}
-                      <:discord:1000446649031729223> **Discord Badges:** ${badges}\n         
-                      <:high:1000449582251130980> **Highest Role:** \n${highestRole}\n
-                      <:role:1000449831157907556> **Roles:** \n${Roles}\n
-                      <:perms:1000451083895849031> **Permissions:** \n\`\`\`ini\n[ ${memberPermissons} ]\`\`\``)
+                      **Name:** \`${member.user.username}\`
+                      > Nickname: **${member.nickname}**
+                      > Tag: **${member.user.tag}**
+                      > ID: **${member.user.id}**
+                      > Avatar: [PNG](${avpng})\n
+                       **Creation:** <t:${parseInt(member.user.createdTimestamp / 1000)}:R>
+                       **Joined:** <t:${parseInt(interaction.member.joinedTimestamp / 1000)}:R>
+                       **Bot:** ${isBot}
+                       **Discord Badges:** ${badges}\n         
+                       **Highest Role:** \n${highestRole}\n
+                       **Roles:** \n${Roles}\n
+                       **Permissions:** \n\`\`\`ini\n[ ${memberPermissons} ]\`\`\``)
                       .setFooter({ text: '©️ IVON', iconURL: ('https://i.imgur.com/sB02Hbz.png') })
                     await interaction.reply({
                         content: `Information about **${member.user.tag}**`,
