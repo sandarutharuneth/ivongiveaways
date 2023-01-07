@@ -3,7 +3,7 @@
 <a href="https://imgur.com/1TLIl08"><img src="https://i.imgur.com/1TLIl08.png" title="source: imgur.com" /></a>
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) <br>
 ## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
-<a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/l3kbuI4.png" title="source: imgur.com" /></a>
+<a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/w0tYT5y.png" title="source: imgur.com" /></a>
 ## 2022 Recap
 <a href="https://imgur.com/QQTf6bK"><img src="https://i.imgur.com/QQTf6bK.png" title="source: imgur.com" /></a>
 ## Developers
