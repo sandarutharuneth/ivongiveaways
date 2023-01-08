@@ -13,7 +13,7 @@
 </p>
 
 ## Links
-- ### This Giveaway Bot Was Created by [Sandaru Tharuneth](https://sandarutharuneth.com/) with the inspiration of [ZeroDiscord's Giveaway](https://github.com/ZeroDiscord) bot.
+- Inspired by: [ZeroDiscord](https://github.com/ZeroDiscord)
 - <a href="https://top.gg/bot/973436715819745290">
   <img src="https://top.gg/api/widget/owner/973436715819745290.svg"></a>
 - <a href='https://ivon.netlify.app' target="_blank"><img alt='netlify' src='https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=netlify&logoColor=white&labelColor=04AD7D&color=90FFA7'/></a>
