@@ -20,6 +20,7 @@
       "axios": "^0.27.2",
       "discord-giveaways": "^6.0.1",
       "discord.js": "^14.6.0",
+      "japi.rest": "^1.0.1",  
       "moment": "^2.29.4",
       "ms": "^3.0.0-canary.1",
       "node-fetch": "^3.3.0",
