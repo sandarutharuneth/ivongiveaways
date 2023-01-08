@@ -49,7 +49,7 @@ Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/
 
 ### Step 1: Install the Dependencies:
 Linux 
-```sh
+```js
 apt install nodejs npm -y
 curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 chmod 777 nodesource_setup.sh
@@ -85,11 +85,11 @@ const japiRest = new japiRestPkg('Your API Key');
 #### That's all! We Are Done! Now Simply host the Bot!
 
 ### Run with node
-```sh
+```js
 node index.js
 ```
 ### Run with pm2
-```sh
+```js
 npm install -g pm2@latest
 pm2 start --name "ivongiveaways" index.js --watch
 ```
