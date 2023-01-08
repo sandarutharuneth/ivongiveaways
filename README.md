@@ -79,7 +79,7 @@ DCBL=https://cdn.discordapp.com/attachments/477946103287906304/48273867577661849
 ### Step 4: Get your japi key
 - Visit [japi](https://key.japi.rest) and get your key
 - Add your key on `slash/userinfo.js`
-```sh
+```js
 const japiRest = new japiRestPkg('Your API Key');
 ```
 #### That's all! We Are Done! Now Simply host the Bot!
