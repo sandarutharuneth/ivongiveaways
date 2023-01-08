@@ -23,7 +23,7 @@ module.exports = {
                       .setURL("https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands")
                       .setEmoji('984296691794583582'))],
         
-        embeds: [new Discord.EmbedBuilder()
+        embeds: [new EmbedBuilder()
           .setAuthor({name: "Congratulations!", iconURL: ('https://i.imgur.com/sB02Hbz.png')})
           .setThumbnail('https://i.imgur.com/sB02Hbz.png')
           .setColor("#2F3136")
