@@ -118,7 +118,7 @@ module.exports = {
                       > ID: **${member.user.id}**
                       > Avatar: [PNG](${avpng})\n
                        **Creation:** <t:${parseInt(member.user.createdTimestamp / 1000)}:R>
-                       **Joined:** <t:${parseInt(interaction.member.joinedTimestamp / 1000)}:R>
+                       **Joined:** <t:${parseInt(member.joinedTimestamp / 1000)}:R>
                        **Bot:** ${isBot}
                        **Discord Badges:** ${badges}\n         
                        **Highest Role:** \n${highestRole}\n
