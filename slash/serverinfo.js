@@ -4,6 +4,13 @@ module.exports = {
   name: 'serverinfo',
   description: 'sends the serverinfo',
   run: async (client, interaction) => {
+    const guild = client.guilds.resolve(interaction.guildId)
+      const voicechannels = await guild.channels.cache.filter(
+                (ch) => ch.type === ChannelType.GuildVoice
+            ).size
+const textchannels = await guild.channels.cache.filter(
+                (ch) => ch.type === ChannelType.GuildText
+            ).size
 
     let embed = new EmbedBuilder()
     .setTitle("**Server Information**")
@@ -19,8 +26,8 @@ module.exports = {
       <:role:1000449831157907556> **Roles:** \`${interaction.guild.roles.cache.size}\`
       <:boost:990601774438166609> **Emojis:** \`${interaction.guild.emojis.cache.size}\`
       <a:nitro:990601542463807528> **Animated Emojis:** \`${interaction.guild.emojis.cache.filter(emoji => emoji.animated).size}\`
-      <:channel:990666581493284915> **Text Channels:** \`${interaction.guild.channels.cache.filter(channel => channel.type === 'GUILD_TEXT').size}\`
-      <:voice:990666579182223431> **Voice Channels:** \`${interaction.guild.channels.cache.filter(channel => channel.type === 'GUILD_VOICE').size}\`\n\n
+      <:channel:990666581493284915> **Text Channels:** \`${textchannels}\`
+      <:voice:990666579182223431> **Voice Channels:** \`${voicechannels}\`\n\n
       **Boost Information**\n
       <:boosters:1000708963626668052> **Total Boosts:** \`${interaction.guild.premiumSubscriptionCount}\`
       <:boost:984643370511118378> **Boost Level:** \`${interaction.guild.premiumTier}\``)
