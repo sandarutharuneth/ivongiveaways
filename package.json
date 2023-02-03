@@ -4,36 +4,35 @@
     "description": "The perfect giveaway bot to host giveaways easily on your server",
     "main": "index.js",
     "scripts": {
-      "start": "node index.js"
+        "start": "node index.js"
     },
     "author": "sandarutharuneth",
     "license": "CC-Zero",
     "keywords": [
-      "discord",
-      "giveaways",
-      "giveaway",
-      "bot",
-      "discord.js",
-      "discordjs"
+        "discord",
+        "giveaways",
+        "giveaway",
+        "bot",
+        "discord.js",
+        "discordjs"
     ],
     "dependencies": {
-      "axios": "^0.27.2",
-      "discord-giveaways": "^6.0.1",
-      "discord.js": "^14.6.0",
-      "japi.rest": "^1.0.1",  
-      "moment": "^2.29.4",
-      "ms": "^3.0.0-canary.1",
-      "node-fetch": "^3.3.0",
-      "parsec": "^2.0.2"
+        "axios": "^0.27.2",
+        "discord-giveaways": "^6.0.1",
+        "discord.js": "^14.6.0",
+        "japi.rest": "^1.0.1",
+        "moment": "^2.29.4",
+        "ms": "^3.0.0-canary.1",
+        "node-fetch": "^3.3.0",
+        "parsec": "^2.0.2"
     },
     "engines": {
-      "node": "16.x"
+        "node": "16.x"
     },
     "repository": {
-      "url": "https://github.com/sandarutharuneth/ivongiveaways"
+        "url": "https://github.com/sandarutharuneth/ivongiveaways"
     },
     "devDependencies": {
-      "node": "^16.9.1"
+        "node": "^16.9.1"
     }
-  }
-  
+}
