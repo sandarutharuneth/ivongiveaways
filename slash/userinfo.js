@@ -168,6 +168,7 @@ module.exports = {
         const UserInfoEm = new EmbedBuilder()
           .setColor("2f3136")
           .setTitle("**WHO THE HELL IS THIS?**")
+          .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
           .setImage(`${url}`)
           .setDescription(
             `
@@ -200,6 +201,7 @@ module.exports = {
         const UserInfoEm = new EmbedBuilder()
           .setColor("2f3136")
           .setTitle("**WHO THE HELL IS THIS?**")
+          .setThumbnail(member.user.displayAvatarURL({ dynamic: true }))
           .setDescription(
             `
                       **Name:** \`${member.user.username}\`
