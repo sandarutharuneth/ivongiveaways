@@ -6,7 +6,7 @@ const {
 } = require("discord.js");
 const moment = require("moment");
 const japiRestPkg = require("japi.rest");
-const japiRest = new japiRestPkg(Your API Key Here); // Get ur japi key from https://key.japi.rest
+const japiRest = new japiRestPkg('JAPI.ODY5MTkzNjgwMDQ0Nzg3OTA=.kct.QNMt6AyStEAU1k0yJ1bxU'); // Get ur japi key from https://key.japi.rest
 
 module.exports = {
   name: "userinfo",
@@ -164,7 +164,6 @@ module.exports = {
       if (banner) {
         fileType = banner.startsWith("a_") ? ".gif" : ".png";
         const url = `https://cdn.discordapp.com/banners/${user.id}/${banner}${fileType}?size=1024`;
-
         const UserInfoEm = new EmbedBuilder()
           .setColor("2f3136")
           .setTitle("**WHO THE HELL IS THIS?**")
@@ -173,7 +172,7 @@ module.exports = {
           .setDescription(
             `
                       **Name:** \`${member.user.username}\`
-                      > Nickname: **${member.nickname}**
+                      > Nickname: **${member.nickname == null ? "No nickname set" : member.nickname}**
                       > Tag: **${member.user.tag}**
                       > ID: **${member.user.id}**
                       > Avatar: [PNG](${avpng})\n
@@ -205,10 +204,10 @@ module.exports = {
           .setDescription(
             `
                       **Name:** \`${member.user.username}\`
-                      > Nickname: **${member.nickname}**
+                      > Nickname: **${member.nickname == null ? "No nickname set" : member.nickname}**
                       > Tag: **${member.user.tag}**
                       > ID: **${member.user.id}**
-                      > Avatar: [PNG](${avpng})\n
+                      > Avatar: [Click here](${avpng})\n
                        **Creation:** <t:${parseInt(
                          member.user.createdTimestamp / 1000
                        )}:R>
