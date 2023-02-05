@@ -1,10 +1,7 @@
 const { GiveawaysManager } = require("discord-giveaways");
 const { Database } = require("quickmongo");
-require("dotenv").config();
-const db = new Database(process.env.MONGOLAB_URI);
-
-
-
+const config = require("./config.json");
+const db = new Database(config.MONGOLAB_URI);
 
 class GiveawayManager extends GiveawaysManager {
 

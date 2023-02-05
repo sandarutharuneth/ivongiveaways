@@ -1,8 +1,7 @@
 const Discord = require("discord.js");
 const { Client, GatewayIntentBits, Partials } = require("discord.js");
 const chalk = require("chalk");
-require("dotenv").config();
-const { TOKEN, MONGOLAB_URI } = process.env;
+const config = require("./config.json");
 const Handler = require("discord-handlers");
 const handler = new Handler();
 const { connect } = require("mongoose");
@@ -20,7 +19,7 @@ const client = new Client({
   ],
 });
 const fs = require("fs");
-const config = require("./config.json");
+
 client.config = config;
 
 // Initialise discord giveaways
@@ -40,8 +39,9 @@ const manager = new GiveawaysManager(client, {
   },
 });
 const { Database } = require("quickmongo");
-const db = new Database(process.env.MONGOLAB_URI);
+const db = new Database(config.MONGOLAB_URI);
 db.once("ready", async () => {
+  console.log(chalk.green(`[MONGO DB]: Connected`));
   if (await db.get("giveaways") === null) await db.set("giveaways", []);
   
 });
@@ -102,7 +102,7 @@ fs.readdir("./slash/", (_err, files) => {
 });
 
 // Login through the client
-client.login(TOKEN);
+client.login(config.token);
 // (async () => {
 //   await connect(MONGOLAB_URI).catch((err) =>
 //     console.log(chalk.red(`[MONGO DB]: Error: ${err}`))
