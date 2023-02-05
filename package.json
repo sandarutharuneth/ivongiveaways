@@ -18,13 +18,17 @@
     ],
     "dependencies": {
         "axios": "^0.27.2",
+        "chalk": "^4.1.2",
         "discord-giveaways": "^6.0.1",
         "discord.js": "^14.6.0",
+        "dotenv": "^16.0.3",
         "japi.rest": "^1.0.1",
         "moment": "^2.29.4",
+        "mongoose": "^6.9.0",
         "ms": "^3.0.0-canary.1",
         "node-fetch": "^3.3.0",
-        "parsec": "^2.0.2"
+        "parsec": "^2.0.2",
+        "quickmongo": "^3.0.2"
     },
     "engines": {
         "node": "16.x"
