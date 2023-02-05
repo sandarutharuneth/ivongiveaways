@@ -28,7 +28,7 @@
         "ms": "^3.0.0-canary.1",
         "node-fetch": "^3.3.0",
         "parsec": "^2.0.2",
-        "quickmongo": "^3.0.2"
+        "quickmongo": "^4.0.0"
     },
     "engines": {
         "node": "16.x"
