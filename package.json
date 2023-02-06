@@ -20,6 +20,7 @@
         "axios": "^0.27.2",
         "chalk": "^4.1.2",
         "discord-giveaways": "^6.0.1",
+        "discord-handlers": "^0.0.1",
         "discord.js": "^14.6.0",
         "dotenv": "^16.0.3",
         "japi.rest": "^1.0.1",

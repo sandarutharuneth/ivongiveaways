@@ -1,9 +1,10 @@
 {
-  "token": " ", 
+  "token": "", 
   "prefix": "!",
   "bug": "1060072882551664670",
   "everyoneMention": false,
   "copyright": "IVON",
   "hostedBy": true,
-  "MONGOLAB_URI" : "mongodb+srv://dex404:rFnafHSIDtnZphfU@cluster0.rl1kktp.mongodb.net/?retryWrites=true&w=majority"
+  "MONGODB_URI" : "",
+  "privateMessageInformation" : true
 }
