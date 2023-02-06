@@ -6,7 +6,7 @@ const {
 } = require("discord.js");
 const moment = require("moment");
 const japiRestPkg = require("japi.rest");
-const japiRest = new japiRestPkg('<API Key>'); // Get ur japi key from https://key.japi.rest
+const japiRest = new japiRestPkg('API Key'); // Get ur japi key from https://key.japi.rest
 
 module.exports = {
   name: "userinfo",

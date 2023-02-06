@@ -119,7 +119,7 @@ module.exports = {
 
 
     // start giveaway
-    client.giveawaysManager.start(giveawayChannel, {
+    await client.giveawaysManager.start(giveawayChannel, {
       // The giveaway duration
       duration: ms(giveawayDuration),
       // The giveaway prize

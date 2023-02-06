@@ -7,7 +7,7 @@ module.exports = {
     options: [
         {
             name: 'giveaway',
-            description: 'The giveaway to reroll (message ID or prize)',
+            description: 'The giveaway to reroll (message ID)',
             type: ApplicationCommandOptionType.String,
             required: true
         }
@@ -27,8 +27,6 @@ module.exports = {
 
         // try to find the giveaway with the provided prize OR with the ID
         const giveaway =
-            // Search with giveaway prize
-            client.giveawaysManager.giveaways.find((g) => g.prize === query && g.guildId === interaction.guild.id) ||
             // Search with giveaway ID
             client.giveawaysManager.giveaways.find((g) => g.messageId === query && g.guildId === interaction.guild.id);
 

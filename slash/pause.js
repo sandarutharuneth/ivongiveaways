@@ -7,7 +7,7 @@ module.exports = {
     options: [
         {
             name: 'giveaway',
-            description: 'The giveaway to pause (message ID or giveaway prize)',
+            description: 'The giveaway to pause (message ID)',
             type: ApplicationCommandOptionType.String,
             required: true
         }
@@ -27,8 +27,6 @@ module.exports = {
 
         // try to find the giveaway with prize alternatively with ID
         const giveaway =
-            // Search with giveaway prize
-            client.giveawaysManager.giveaways.find((g) => g.prize === query && g.guildId === interaction.guild.id) ||
             // Search with giveaway ID
             client.giveawaysManager.giveaways.find((g) => g.messageId === query && g.guildId === interaction.guild.id);
 

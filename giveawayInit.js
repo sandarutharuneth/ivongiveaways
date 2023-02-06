@@ -1,35 +1,41 @@
 const { GiveawaysManager } = require("discord-giveaways");
-const { Database } = require("quickmongo");
-const config = require("./config.json");
-const db = new Database(config.MONGOLAB_URI);
+const giveawayModel = require('./schemas/giveawaysSchema');
 
-class GiveawayManager extends GiveawaysManager {
+module.exports = (client) =>{
+
+    class GiveawayManagerCustom extends GiveawaysManager {
 
 
-    async getAllGiveaways() {
-        return await db.get("giveaways");
-    }
+        async getAllGiveaways() {
+            return await giveawayModel.find().lean().exec();
+        }
+    
+        async saveGiveaway(messageId, giveawayData) {
+            await giveawayModel.create(giveawayData);
+            return true;
+        }
+    
+        async editGiveaway(messageId, giveawayData) {
+            await giveawayModel.updateOne({ messageId }, giveawayData, { omitUndefined: true }).exec();
+            return true;
+        }
+    
+        async deleteGiveaway(messageId) {
+            await giveawayModel.deleteOne({ messageId }).exec();
+            return true;
+        }
+    };
 
-    async saveGiveaway(messageID, giveawayData) {
-        await db.push("giveaways", giveawayData);
-        return true;
-    }
-
-    async editGiveaway(messageID, giveawayData) {
-        const giveaways = await db.get("giveaways");
-        const newGiveawaysArray = giveaways.filter((giveaway) => giveaway.messageID !== messageID);
-        newGiveawaysArray.push(giveawayData);
-        await db.set("giveaways", newGiveawaysArray);
-        return true;
-    }
-
-    async deleteGiveaway(messageID) {
-        const data = await db.get("giveaways");
-        const newGiveawaysArray = data.filter((giveaway) => giveaway.messageID !== messageID);
-        await db.set("giveaways", newGiveawaysArray);
-        return true;
-    }
-
+    const manager = new GiveawayManagerCustom(client, {
+        storage: false,
+        updateCountdownEvery: 10000,
+        default: {
+            botsCanWin: false,
+            exemptPermissions: [],
+            embedColor: "#FF0000",
+            reaction: "🎉"
+        }
+    });
+    
+    client.giveawaysManager = manager
 }
-
-module.exports = GiveawayManager;
