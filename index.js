@@ -22,31 +22,17 @@ const fs = require("fs");
 
 client.config = config;
 
-// Initialise discord giveaways
-const manager = new GiveawaysManager(client, {
-  storage: false,
-  updateCountdownEvery: 10000,
-  default: {
-    botsCanWin: false,
-    embedColor: "#2F3136",
-    reaction: "🎉",
-    lastChance: {
-      enabled: true,
-      content: ` ⚠️ **Last chance to enter**`,
-      threshold: 5000,
-      embedColor: "#2F3136",
-    },
-  },
-});
-const { Database } = require("quickmongo");
-const db = new Database(config.MONGOLAB_URI);
-db.once("ready", async () => {
-  console.log(chalk.green(`[MONGO DB]: Connected`));
-  if (await db.get("giveaways") === null) await db.set("giveaways", []);
-  
-});
+(async () => {
+  await connect(config.MONGODB_URI).catch((err) =>
+    console.log(chalk.red(`[MONGO DB]: Error: ${err}`))
+  );
+})();
 
-client.giveawaysManager = manager;
+handler.handleMongoEvents("./events/mongo", client);
+
+// Initialise discord giveaways
+
+GiveawaysManager(client);
 
 
 //<:confetti:984296694357319730>
@@ -79,9 +65,30 @@ fs.readdir("./events/giveaways", (_err, files) => {
   });
 });
 
+// if(config.privateMessageInformation === true) {
+//   fs.readdirSync('./events/giveaways').forEach(async (dir) => {
+//       const events = fs.readdirSync(`./events/giveaways/${dir}`).filter(file => file.endsWith('.js'));
+  
+//       for(const file of events) {
+//           const event = require(`./events/giveaways/${dir}/${file}`);
+//           if(event.name) {
+//               // console.log(`[GIVEAWAYS EVENTS]` + ` Event ${file.split(".")[0]} loaded!`);
+          
+//               client.giveawaysManager.on(event.name, (...args) => event.execute(...args, client))
+//               delete require.cache[require.resolve(`./events/giveaways/${dir}/${file}`)];
+//           } else {
+//               console.log(`[GIVEAWAYS EVENTS]` + ` Failed to load event: ${file.split('.')[0]}!`);
+//               continue;
+//           }
+//       }
+//   });
+// } else {
+//   return console.log(`[WARNING]`.yellow + ` Private Message Information is disabled!`);
+// }
+
 /* Load all events (mongo based) */
 
-handler.handleMongoEvents("./events/mongo", client);
+
 
 // let interactions be a new collection ( slash commands  )
 client.interactions = new Discord.Collection();
@@ -103,10 +110,4 @@ fs.readdir("./slash/", (_err, files) => {
 
 // Login through the client
 client.login(config.token);
-// (async () => {
-//   await connect(MONGOLAB_URI).catch((err) =>
-//     console.log(chalk.red(`[MONGO DB]: Error: ${err}`))
-//   );
-// })();
-
 
