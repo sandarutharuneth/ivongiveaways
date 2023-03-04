@@ -9,7 +9,8 @@
 ## Developers
 <p align="center">
   <img src="https://discord.c99.nl/widget/theme-2/846193169758814228.png" align="center"> <br><br>
-  <img src="https://discord.c99.nl/widget/theme-2/768741356297912331.png" align="center">
+  <img src="https://discord.c99.nl/widget/theme-2/768741356297912331.png" align="center"> <br><br>
+  <img src="https://discord.c99.nl/widget/theme-2/719229142536683550.png" align="center">
 </p>
 
 ## Links
