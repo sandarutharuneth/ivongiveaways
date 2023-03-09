@@ -14,11 +14,11 @@
 </p>
 
 ## Links
-- Inspired by: [ZeroDiscord](https://github.com/ZeroDiscord)
 - <a href="https://top.gg/bot/973436715819745290">
   <img src="https://top.gg/api/widget/owner/973436715819745290.svg"></a>
 - <a href='https://ivon.netlify.app' target="_blank"><img alt='netlify' src='https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=netlify&logoColor=white&labelColor=04AD7D&color=90FFA7'/></a>
 - <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
+- Inspired by: [ZeroDiscord](https://github.com/ZeroDiscord)
 
 
 ## Support Server
@@ -45,8 +45,7 @@ Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/
 > ⚠  This bot needs a [Node.js v16+](https://nodejs.org/en/blog/release/v16.0.0/)  runtime to function since discord.js version 13 requires node version to function.
 
 [![Run on Repl.it](https://repl.it/badge/github/sandarutharuneth/ivongiveaways)](https://repl.it/github/sandarutharuneth/ivongiveaways)
-
-**Aliter**
+[![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/sandarutharuneth/ivongiveaways)
 
 ### Step 1: Install the Dependencies:
 Linux 
