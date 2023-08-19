@@ -4,6 +4,7 @@ module.exports = {
   name: 'serverinfo',
   description: 'sends the serverinfo',
   run: async (client, interaction) => {
+    try {
     const guild = client.guilds.resolve(interaction.guildId)
       const voicechannels = await guild.channels.cache.filter(
                 (ch) => ch.type === ChannelType.GuildVoice
@@ -37,5 +38,12 @@ const textchannels = await guild.channels.cache.filter(
         iconURL: ('https://i.imgur.com/sB02Hbz.png')
     })
     interaction.reply({embeds: [embed]});
+    } catch (error) {
+      const errorEmbed = new EmbedBuilder()
+        .setDescription(`:x: **Something went wrong while retrieving your server data.**`)
+        .setColor('#2f3136');
+
+      interaction.editReply({ embeds: [errorEmbed] });
+    }  
   }
 }
