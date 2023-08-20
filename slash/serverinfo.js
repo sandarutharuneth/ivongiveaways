@@ -12,6 +12,8 @@ module.exports = {
 const textchannels = await guild.channels.cache.filter(
                 (ch) => ch.type === ChannelType.GuildText
             ).size
+      
+      await interaction.deferReply()
 
     let embed = new EmbedBuilder()
     .setTitle("**Server Information**")
