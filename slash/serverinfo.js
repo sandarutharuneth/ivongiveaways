@@ -12,8 +12,6 @@ module.exports = {
 const textchannels = await guild.channels.cache.filter(
                 (ch) => ch.type === ChannelType.GuildText
             ).size
-      
-      await interaction.deferReply()
 
     let embed = new EmbedBuilder()
     .setTitle("**Server Information**")
@@ -45,7 +43,7 @@ const textchannels = await guild.channels.cache.filter(
         .setDescription(`:x: **Something went wrong while retrieving your server data.**`)
         .setColor('#2f3136');
 
-      interaction.editReply({ embeds: [errorEmbed] });
+     await interaction.editReply({ embeds: [errorEmbed] });
     }  
   }
 }
