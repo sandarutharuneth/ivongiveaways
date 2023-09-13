@@ -6,6 +6,7 @@ const Handler = require("discord-handlers");
 const handler = new Handler();
 const { connect } = require("mongoose");
 const GiveawaysManager = require("./giveawayInit");
+
 const client = new Client({
   partials: [
     Partials.Channel, // for text channel
@@ -31,14 +32,10 @@ client.config = config;
 handler.handleMongoEvents("./events/mongo", client);
 
 // Initialise discord giveaways
-
 GiveawaysManager(client);
 
 
-//<:confetti:984296694357319730>
-//<:warning:984663315412303922>
 /* Load all events (discord based) */
-
 fs.readdir("./events/discord", (_err, files) => {
   files.forEach((file) => {
     if (!file.endsWith(".js")) return;
@@ -51,7 +48,6 @@ fs.readdir("./events/discord", (_err, files) => {
 });
 
 /* Load all events (giveaways based) */
-
 fs.readdir("./events/giveaways", (_err, files) => {
   files.forEach((file) => {
     if (!file.endsWith(".js")) return;
@@ -92,8 +88,10 @@ fs.readdir("./events/giveaways", (_err, files) => {
 
 // let interactions be a new collection ( slash commands  )
 client.interactions = new Discord.Collection();
+
 // creating an empty array for registering slash commands
 client.register_arr = [];
+
 /* Load all slash commands */
 fs.readdir("./slash/", (_err, files) => {
   files.forEach((file) => {
