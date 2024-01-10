@@ -76,12 +76,6 @@ FOTTERIMG=Your Footer Image Link goes here
 THUMBNAIL=Your Thumbnail image link goes here
 DCBL=https://cdn.discordapp.com/attachments/477946103287906304/482738675776618497/DBL.png
 ```
-### Step 4: Get your japi key
-- Visit [japi](https://key.japi.rest) and get your key
-- Add your key on `slash/userinfo.js`
-```js
-const japiRest = new japiRestPkg('Your API Key');
-```
 #### That's all! We Are Done! Now Simply host the Bot!
 
 ### Run with node
