@@ -17,7 +17,6 @@
 - <a href="https://top.gg/bot/973436715819745290">
   <img src="https://top.gg/api/widget/owner/973436715819745290.svg"></a>
 - <a href='https://ivon.netlify.app' target="_blank"><img alt='netlify' src='https://img.shields.io/badge/Website-100000?style=for-the-badge&logo=netlify&logoColor=white&labelColor=04AD7D&color=90FFA7'/></a>
-- <a href='https://www.patreon.com/projectrazer' target="_blank"><img alt='Patreon' src='https://img.shields.io/badge/Patreon-100000?style=for-the-badge&logo=Patreon&logoColor=white&labelColor=FF7726&color=FED89F'/></a>
 - Inspired by: [ZeroDiscord](https://github.com/ZeroDiscord)
 
 
@@ -42,7 +41,8 @@ Please read [code of conduct](https://github.com/sandarutharuneth/ivongiveaways/
 
 # You can run the bot in just a few steps! Let me show you how:
 ## Hosting 
-> ⚠  This bot needs a [Node.js v16+](https://nodejs.org/en/blog/release/v16.0.0/)  runtime to function since discord.js version 13 requires node version to function.
+> [!WARNING]
+> This bot needs a [Node.js v18+](https://nodejs.org/en/blog/release/v16.0.0/)  runtime to function since discord.js version 13 requires node version to function
 
 [![Run on Repl.it](https://repl.it/badge/github/sandarutharuneth/ivongiveaways)](https://repl.it/github/sandarutharuneth/ivongiveaways)
 [![Remix on Glitch](https://cdn.glitch.com/2703baf2-b643-4da7-ab91-7ee2a2d00b5b%2Fremix-button.svg)](https://glitch.com/edit/#!/import/github/sandarutharuneth/ivongiveaways)
@@ -63,9 +63,7 @@ Windows
 npm install 
 ```
 
-### Step 2: Obtain a Bot Token From [Here](https://discord.com/developers) <br> <br>
-➖
-<b>
+### Step 2: Obtain a Bot Token From [Here](https://discord.com/developers)
   
 
 ### Step 3 : Replace the Token and other dependencies inside [.env](https://github.com/sandarutharuneth/ivongiveaways/blob/master/.env) <br>
@@ -87,23 +85,6 @@ node index.js
 npm install -g pm2@latest
 pm2 start --name "ivongiveaways" index.js --watch
 ```
-
-# Features
-## Featuring | Slash Only Giveaway Commands 
-➖
-<b>
-  
-### Interactive Giveaway Creation 
-➖
-<b>
-
-### Basic Utility Commands
-➖
-<b>
-  
-### Featured Bonus Entries 
-➖
-<b>
 
   <h3 align="left">Connect with me:</h3>
 <div align="center">
