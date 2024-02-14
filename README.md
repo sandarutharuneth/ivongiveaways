@@ -1,17 +1,12 @@
 # IVON Technologies
 ### The perfect giveaway bot to host giveaways easily on your server build with discord.js
+> [!CAUTION]
+> We have discontinued updates for this project. **IVON** is now on a different code base, and currently we do not have any intentions yet to share it.
+
 <a href="https://imgur.com/1TLIl08"><img src="https://i.imgur.com/1TLIl08.png" title="source: imgur.com" /></a>
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com) <br>
 ## Invite our [Giveaway bot IVON](https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands) and help us out!
 <a href="https://discord.com/api/oauth2/authorize?client_id=973436715819745290&permissions=406881561681&scope=bot%20applications.commands" target="_blank"><img src="https://i.imgur.com/w0tYT5y.png" title="source: imgur.com" /></a>
-<!--## 2022 Recap
-<a href="https://imgur.com/QQTf6bK"><img src="https://i.imgur.com/QQTf6bK.png" title="source: imgur.com" /></a> -->
-## Developers
-<p align="center">
-  <img src="https://discord.c99.nl/widget/theme-2/846193169758814228.png" align="center"> <br><br>
-  <img src="https://discord.c99.nl/widget/theme-2/768741356297912331.png" align="center"> <br><br>
-  <img src="https://discord.c99.nl/widget/theme-2/719229142536683550.png" align="center">
-</p>
 
 ## Links
 - <a href="https://top.gg/bot/973436715819745290">
